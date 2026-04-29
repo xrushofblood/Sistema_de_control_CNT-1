@@ -1,0 +1,38 @@
+<html lang='es'>
+<head>
+<meta http-equiv='Content-Type' content='text/html; charset=utf-8'>
+<title>Configuración del dispositivo</title>
+<style type='text/css'>
+	input{width:40%;font-size: 18px;margin: 0px 2.2%;padding: 5px;color:#505050}
+</style>
+</head>
+<body>
+	<div style='width: 100%%; height: 45px;background: #00AAff;'>
+		<span style='display:block;font-size:32px;color:white;text-align:center'>
+			Máster en Informática de la Universidad de Oviedo
+		</span>
+	</div>
+	<form action='' method='post'>
+		<div style='height: 40px;margin:15px 6px 20px 0;'>
+			<input title='SSID' value='SSID' name='ssid'
+				   onfocus="if(this.value==this.title) this.value='';"
+				   onblur="if(this.value=='') this.value=this.title;"/>
+		</div>
+		<div>
+			<input title='Contraseña' value='Contraseña' name='password'
+				   onfocus="if(this.value==this.title) {this.value='';this.type='password';}"
+				   onblur="if(this.value=='') {this.value=this.title; this.type='text';}"/>
+		</div>
+		<div style='height: 40px;margin:30px 6px 20px 0;'>
+			<input title='Nombre' value='Nombre' name='name'
+				   onfocus="if(this.value==this.title) this.value='';"
+				   onblur="if(this.value=='') this.value=this.title;"/>
+		</div>
+		<p style='text-align:center'>
+			<button style='font-size:20px' onclick='document.getElementById('formulariocredenciales').submit();'>
+					Guardar y reiniciar
+			</button>
+		</p>
+	</form>
+</body>
+</html>

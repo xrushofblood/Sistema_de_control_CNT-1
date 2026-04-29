@@ -1,0 +1,51 @@
+<html lang='es'>
+<head>
+<meta http-equiv='Content-Type' content='text/html; charset=utf-8'>
+<title>Control</title>
+<style type='text/css'>
+	input{width:40%;font-size: 18px;margin: 0px 2.2%;padding: 5px;color:#505050}
+</style>
+</head>
+<body>
+	<div style='width: 100%%; height: 45px;background: #0000ff;'>
+		<span style='display:block;font-size:32px;color:white;text-align:center'>
+			@dev_name@
+		</span>
+	</div>
+	<form action='' method='post'>
+		<span style ='display:block;font-size; font-size:32px;padding:10px 10px 10px 20px'>
+			Temperatura: @temp@ ºC 
+		</span>
+		<span style ='display:block;font-size; font-size:32px;padding:10px 10px 10px 20px'>
+			Humedad: @hum@ % 
+		</span>
+		<span style ='display:block;font-size; font-size:32px;padding:10px 10px 10px 20px'>
+			Salida: <label style = 'color: @cnt_colour@'>@cnt@</label> 
+		</span>
+		<br>
+		<span style ='display:block;font-size; font-size:32px;padding:10px 10px 10px 20px'>
+			Consigna de temperatura (ºC): 
+			<input style ='font-size:32px; width:100px' name='temp_setpoint' value='@temp_setpoint@'>
+		</span>
+		<span style ='display:block;font-size; font-size:32px;padding:10px 10px 10px 20px'>
+			Consigna de humedad (%): 
+			<input style ='font-size:32px; width:100px' name='hum_setpoint' value='@hum_setpoint@'>
+		</span>
+		<br>
+		<label style ='font-size:32px;padding:10px 30px 10px 20px'>
+			Modo de control: 
+		</label>
+		<select style ='font-size:25px' name='control_mode'>
+			<option value='on' @selected_on@>ON</option>
+			<option value='off' @selected_off@>OFF</option>
+			<option value='temp_auto' @selected_temp_auto@>Automático de temperatura</option>
+			<option value='hum_auto' @selected_hum_auto@>Automático de humedad</option>
+		</select>
+		<p style='text-align:center'>
+			<button style='font-size:20px' onclick='document.getElementById('formulariocredenciales').submit();'>
+					Actualizar
+			</button>
+		</p>
+	</form>
+</body>
+</html>
